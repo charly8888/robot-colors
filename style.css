@@ -3,11 +3,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
 }
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   background-color: #131313;
   color: beige;
+  min-height:100vh;
 }
 
 main{
@@ -19,12 +21,12 @@ main{
 #robot  {
   min-height: 80vh;
   width: 40vw;
-  background-color: rgba(187, 187, 187, 0.363);
+  /* background-color: rgba(187, 187, 187, 0.363); */
   display:flex;
   justify-content: center;
   align-items: center;
-  min-width:400px;
-  z-index: -12;
+  flex-grow: 4;
+  min-width:460px;
 }
 
 .chest{
@@ -131,19 +133,23 @@ main{
   color:antiquewhite;
   font-size: 10px;
 }
+
+
+
 /* ARMS */
 
 
 .container-arm-left{
   position: relative;
+  background-color:transparent;
   width: 1px;
   height: 1px;
-  background-color:greenyellow;
   top:12px;
   right:15px;
-  /* transform:rotate(90deg); */
-  transition: 3s;
+  transition: 3s linear;
 }
+
+
 .arms{
   position: absolute;
   width:30px;
@@ -155,6 +161,23 @@ main{
   border-radius: 1rem;
   z-index: -1;
 }
+
+
+.container-arm-right{
+  position: relative;
+  background-color:transparent;
+  width: 1px;
+  height: 1px;
+  top:12px;
+  left:159px;
+  transition: 3s linear;
+}
+
+.container-arm-right .arms{
+  transform: rotateY(180deg);
+  position: absolute;
+}
+
 .arms>.bar:nth-child(1){
   top:18%;
 }
@@ -168,6 +191,7 @@ main{
 .arms>.bar:nth-child(4){
   top:72%;
 }
+
 .hands{
   position: absolute;
   width:25px;
@@ -209,12 +233,6 @@ main{
   overflow:hidden;
 }
 
-.container-arm-right{
-  position:relative;
-  left:140px;
-  top:10px;
-  transform: rotateY(180deg)
-}
 
 
 
@@ -325,18 +343,35 @@ main{
   flex-grow: 4;
 }
 /* Selectores de las partes del cuerpo del robot */
+.container-selector-body-extern{
+  min-width: 305px;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  padding:2px;
+  background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11));
+  border-radius: 1rem;
+}
 .container-selector-body{
+  position: relative;
+  width: 100%;
+  height: auto;
   display:flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
+  background-color:#131313;
+  padding: 1rem;
+  border-radius: 1rem;
 }
-.divct{
-  margin: 0.5rem;
-  display: inline-block;
-  position:relative;
-  background-color:black;
-  overflow: hidden;
+.container-selector-body::before{
+  position: absolute;
+  content: "CHOOSE THE PIECE";
+  display: inline;
+  top:-22px;
+  background:#131313;
+  padding:0.5rem;
+  color: rgb(239, 68, 68);
+  font-size: 1.5rem;
 }
 .bar-g{
   position:absolute;
@@ -360,6 +395,7 @@ main{
 }
 
 
+
 span{
   background: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11));
   -webkit-background-clip: text;
@@ -374,21 +410,25 @@ span{
     transform: rotate(360deg)
   }
 }
+.divct{
+  margin: 0.5rem;
+  display: inline-block;
+  position:relative;
+  background-color:black;
+  overflow: hidden;
+}
 
-.divct:hover,
-.divct:focus-within{
+.divct:hover{
   transform: scale(1.1);
   transition: 0.25s;
 }
 
-.divct:hover span,
-.divct:focus-within span{
+.divct:hover span{
   background: linear-gradient(to right, rgb(167, 243, 208), rgb(110, 231, 183), rgb(59, 130, 246));
   -webkit-background-clip: text;
   color: transparent;
 }
-.divct:hover .bar-g,
-.divct:focus-within .bar-g{
+.divct:hover .bar-g{
   position:absolute;
   left:-15%;
   top:17%;
@@ -398,6 +438,26 @@ span{
   transition: 1s;
   animation: animate 2s linear infinite;
 }
+
+.lala{
+  transform: scale(1.1);
+}
+.lala-bar{
+  position:absolute;
+  left:-15%;
+  top:17%;
+  width: 130%;
+  height:2rem;
+  background:linear-gradient(to right, rgb(167, 243, 208), rgb(110, 231, 183), rgb(59, 130, 246));
+  transition: 1s;
+  animation: animate 2s linear infinite;
+}
+.lala-btm-span{
+  background: linear-gradient(to right, rgb(167, 243, 208), rgb(110, 231, 183), rgb(59, 130, 246));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 /* FIN */
 
 .header{

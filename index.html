@@ -35,7 +35,7 @@
         </div>
 
         <!-- Arms -->
-        <div class="container-arm-left">
+        <div class="container-arm-left ">
           <div class="arms ">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -64,9 +64,9 @@
         </div>
         <!-- Front buttons -->
         <div class="content-buttons">
-          <button></button>
+          <button id="arm-left-button"></button>
           <button>PRESS</button>
-          <button></button>
+          <button id="arm-right-button" ></button>
         </div>
 
         <div class="hips"></div>
@@ -90,23 +90,89 @@
     <div class="container-left">
 
 
-      
+    <section class="container-selector-body-extern">
       <section id="container-selector-body" class="container-selector-body">
         
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="button-head"><span>EARS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="button-ears"><span>MOUTH</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="hair"><span>HAIR</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="mouth"><span>CHEST</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="chest"><span>ARMS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="arms"><span>HANDS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="hands"><span>HAIR</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="content-buttons"><span>CONTENT BUTTONS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="hips"><span>HIPS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="legs"><span>LEGS</span></button></div>
-        <div class="divct"><div class="bar-g"></div><button class="btn-of-body" id="foot"><span>FOOT</span></button></div>
-        
-      </section>
+        <div id="div-hair" class="divct ">
+          <div id="div-bar-hair" class="bar-g "></div>
+          <button class="btn-of-body " id="hair">
+            <span id="span-hair" class="">HAIR</span>
+          </button>
+        </div>
 
+        <div id="div-head" class="divct">
+          <div id="div-bar-head" class="bar-g"></div>
+          <button class="btn-of-body" id="button-head">
+            <span id="span-head">HEAD</span>
+          </button>
+        </div>
+
+        <div id="div-ears" class="divct">
+          <div id="div-bar-ears"  class="bar-g"></div>
+          <button class="btn-of-body" id="button-ears">
+            <span id="span-ears">EARS</span>
+          </button>
+        </div>
+
+
+        <div id="div-mouth" class="divct">
+          <div id="div-bar-mouth" class="bar-g"></div>
+          <button class="btn-of-body" id="mouth">
+            <span id="span-mouth">MOUTH</span>
+          </button>
+        </div>
+
+        <div id="div-chest" class="divct">
+          <div id="div-bar-chest" class="bar-g "></div>
+          <button class="btn-of-body" id="chest">
+            <span  id="span-chest">CHEST</span>
+          </button>
+        </div>
+
+        <div id="div-arms" class="divct">
+          <div id="div-bar-arms" class="bar-g"></div>
+          <button class="btn-of-body" id="arms">
+            <span  id="span-arms">ARMS</span>
+          </button>
+        </div>
+
+        <div id="div-hands" class="divct">
+          <div id="div-bar-hands" class="bar-g"></div>
+          <button class="btn-of-body" id="hands">
+            <span id="span-hands">HANDS</span>
+          </button>
+        </div>
+
+        <div id="div-content-buttons" class="divct">
+          <div id="div-bar-content-buttons" class="bar-g"></div>
+          <button class="btn-of-body" id="content-buttons">
+            <span id="span-content-buttons">CONTENT BUTTONS</span>
+          </button>
+        </div>
+
+        <div id="div-hips" class="divct">
+          <div id="div-bar-hips" class="bar-g"></div>
+          <button class="btn-of-body" id="hips">
+            <span id="span-hips">HIPS</span>
+          </button>
+        </div>
+
+        <div id="div-legs" class="divct">
+          <div id="div-bar-legs" class="bar-g"></div>
+          <button class="btn-of-body" id="legs">
+            <span id="span-legs">LEGS</span>
+          </button>
+        </div>
+
+        <div id="div-foot" class="divct">
+          <div id="div-bar-foot" class="bar-g"></div>
+          <button class="btn-of-body" id="foot">
+            <span id="span-foot">FOOT</span>
+          </button>
+        </div>
+
+      </section>
+    </section>
 
       <section class="container-selector-colors">
 
@@ -127,7 +193,8 @@
     </div>
   </main>
   <footer></footer>
-  <script type="text/javascript" src="/main.js"></script>
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="/animation.js"></script>
 </body>
 
 </html>
