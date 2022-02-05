@@ -6,21 +6,25 @@
 }
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-color: #131313;
+  color: beige;
 }
 
 main{
   display:flex;
+  /* justify-content:space-between; */
+  /* gap:0px; */
 }
 
 #robot  {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 40vw;
   background-color: rgba(187, 187, 187, 0.363);
   display:flex;
   justify-content: center;
   align-items: center;
   min-width:400px;
+  z-index: -12;
 }
 
 .chest{
@@ -127,16 +131,29 @@ main{
   color:antiquewhite;
   font-size: 10px;
 }
+/* ARMS */
 
+
+.container-arm-left{
+  position: relative;
+  width: 1px;
+  height: 1px;
+  background-color:greenyellow;
+  top:12px;
+  right:15px;
+  /* transform:rotate(90deg); */
+  transition: 3s;
+}
 .arms{
   position: absolute;
   width:30px;
   height:140px;
   background-color: rgb(200, 96, 35);
   border: 3px solid black;
-  left:-30px;
-  top:-3px;
+  left:-15px;
+  top:-14px;
   border-radius: 1rem;
+  z-index: -1;
 }
 .arms>.bar:nth-child(1){
   top:18%;
@@ -191,16 +208,21 @@ main{
   left:-60px;
   overflow:hidden;
 }
-/* .container-arms{
-  width:0;
 
-  transform:rotate(90deg)
-} */
 .container-arm-right{
   position:relative;
-  left:0px;
+  left:140px;
+  top:10px;
   transform: rotateY(180deg)
 }
+
+
+
+
+/* MOUTH */
+
+
+
 
 .mouth{
   width:80px;
@@ -282,16 +304,119 @@ main{
 .container-selector-colors{
   display:flex;
   background-color:aquamarine;
-  width:205px;
-  height:75px;
+  width:208px;
+  height:auto;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap:wrap;
   border-radius: 1rem;
   margin:2rem;
+  padding: 0.5rem;
+  box-shadow: inset 0px 0px 13px 2px rgba(0,0,0,0.75);
 }
 .container-selector-colors>button{
+  margin: 1px;
   width: 30px;
   height:30px;
   border-radius: 50%;
+
 }
+.container-left{
+  flex-grow: 4;
+}
+/* Selectores de las partes del cuerpo del robot */
+.container-selector-body{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.divct{
+  margin: 0.5rem;
+  display: inline-block;
+  position:relative;
+  background-color:black;
+  overflow: hidden;
+}
+.bar-g{
+  position:absolute;
+  left:-15%;
+  top:17%;
+  width: 130%;
+  height:2rem;
+  background:linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11));
+  transition: 1s;
+  animation: animate 2s linear infinite;
+}
+
+.btn-of-body{
+  position: relative;
+  border: none;
+  font: inherit;
+  margin: 0.1em;
+  padding: 1em 2em;
+  background-color:#131313;
+  cursor: pointer;
+}
+
+
+span{
+  background: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+.divct:hover,
+.divct:focus-within{
+  transform: scale(1.1);
+  transition: 0.25s;
+}
+
+.divct:hover span,
+.divct:focus-within span{
+  background: linear-gradient(to right, rgb(167, 243, 208), rgb(110, 231, 183), rgb(59, 130, 246));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.divct:hover .bar-g,
+.divct:focus-within .bar-g{
+  position:absolute;
+  left:-15%;
+  top:17%;
+  width: 130%;
+  height:2rem;
+  background:linear-gradient(to right, rgb(167, 243, 208), rgb(110, 231, 183), rgb(59, 130, 246));
+  transition: 1s;
+  animation: animate 2s linear infinite;
+}
+/* FIN */
+
+.header{
+  width: 100%;
+  height:auto;
+  text-align: center;
+}
+.title{
+  font-size: 3rem;
+  display: inline-block;
+  margin: 1rem auto;
+  background: linear-gradient(to right, rgb(110, 231, 183), rgb(59, 130, 246), rgb(147, 51, 234));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/* ANIMACIONES  */
+/* .arm-right-up{
+  transform: rotate(10deg);
+  transition: 1s linear;
+} */
