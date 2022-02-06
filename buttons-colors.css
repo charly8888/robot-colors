@@ -3,8 +3,9 @@
     height:250px;
     position:relative;
     transform:scale(0.5);
-    left:calc(50% - 75px);
-    top: 0px;
+    left:calc(50% - 84px);
+    top:-5%
+
 }
 .container-selector-colors::before{
     content: "";

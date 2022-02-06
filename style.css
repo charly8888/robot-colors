@@ -15,7 +15,7 @@ body {
 
 main{
   display:flex;
-  /* justify-content:space-between; */
+  justify-content:space-evenly;
   /* gap:0px; */
 }
 
@@ -326,9 +326,10 @@ main{
 /* Selectores de las partes del cuerpo del robot */
 .container-selector-body-extern{
   min-width: 305px;
+  max-width: 445px;
   width: auto;
   height: auto;
-  margin: 1rem;
+  margin: 1rem auto;
   padding:2px;
   background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(245, 158, 11));
   border-radius: 1rem;
@@ -447,9 +448,9 @@ span{
   text-align: center;
 }
 .title{
-  font-size: 3rem;
+  font-size: 4rem;
   display: inline-block;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   background: linear-gradient(to right, rgb(110, 231, 183), rgb(59, 130, 246), rgb(147, 51, 234));
   -webkit-background-clip: text;
   color: transparent;
@@ -471,4 +472,33 @@ footer{
   background: none;
   color: rgb(194, 181, 181);
   font-size: 0.7rem;
+}
+
+@media screen and (max-width:982px) {
+  main,header{
+  }
+  
+}
+@media screen and (max-width:764px) {
+  main{
+      flex-direction: column;
+  }
+  #robot{
+    min-height:55vh
+  }
+}
+@media screen and (max-width:500px) {
+
+  main{
+      flex-direction: column;
+  }
+  #robot{
+    transform: scale(0.7);
+    min-height:55vh;
+    min-width:100%;
+    left:100%;
+  }
+  .title{
+    font-size:2rem;
+  }
 }
