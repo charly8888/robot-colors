@@ -10,6 +10,7 @@ body {
   background-color: #131313;
   color: beige;
   min-height:100vh;
+  position: relative;
 }
 
 main{
@@ -20,13 +21,11 @@ main{
 
 #robot  {
   min-height: 80vh;
-  width: 40vw;
-  /* background-color: rgba(187, 187, 187, 0.363); */
+  background-color:#131313 ;
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 4;
-  min-width:460px;
+  min-width:500px;
 }
 
 .chest{
@@ -159,7 +158,6 @@ main{
   left:-15px;
   top:-14px;
   border-radius: 1rem;
-  z-index: -1;
 }
 
 
@@ -321,7 +319,9 @@ main{
 
 
 .container-left{
-  flex-grow: 4;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
 }
 /* Selectores de las partes del cuerpo del robot */
 .container-selector-body-extern{
@@ -455,3 +455,20 @@ span{
   color: transparent;
 }
 
+footer{
+  position:absolute;
+  bottom:0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width:100%;
+}
+ footer h6{
+   margin:0.5rem;
+  color: grey;
+ }
+ footer > h6 > span{
+  background: none;
+  color: rgb(194, 181, 181);
+  font-size: 0.7rem;
+}
