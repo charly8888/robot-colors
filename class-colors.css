@@ -1,5 +1,5 @@
 .yellow{
-    background-color:  rgba(254,237,1,255) !important; 
+    background-color:  rgba(254,237,1,255)  !important
 }
 .orange{
     background-color:rgba(242,148,0,255) !important;
@@ -46,7 +46,7 @@
 }
 .hands.red{
     background-color:transparent !important;
-  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(227,0,27,255),0 0 0 30px black !important;
+  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(227,0,27,255),0 0 0 30px black!important;
 }
 .hands.fuchsia{
     background-color:transparent !important;
@@ -61,8 +61,8 @@
   box-shadow: 0 0 0 3px black,0 0 0 27px rgba(146,17,126,255),0 0 0 30px black !important;
 }
 .hands.blue{
-    background-color:transparent !important;
-  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(24,41,131,255),0 0 0 30px black !important;
+    background-color:transparent!important;
+  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(24,41,131,255),0 0 0 30px black !important ;
 }
 .hands.cornflowerblue{
     background-color:transparent !important;
@@ -74,7 +74,7 @@
 }
 .hands.aquamarine{
     background-color:transparent !important;
-  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(0,151,144,255),0 0 0 30px black !important;
+  box-shadow: 0 0 0 3px black,0 0 0 27px rgba(0,151,144,255),0 0 0 30px black !important ;
 }
 .hands.green{
     background-color:transparent !important;

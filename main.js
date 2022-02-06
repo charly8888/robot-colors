@@ -115,6 +115,7 @@ buttonHead.addEventListener("click", () => {
   } else {
   currentSelection = head
   limpiarYagregar(div_head, div_bar_head, span_head)
+  console.log(currentSelection)
 }
 })
 
@@ -205,7 +206,6 @@ let cambiarColor = function (currentSelection, color) {
 
   if (currentSelection.length >= 1) {
     currentSelection.forEach(e => cambiarColor(e, color))
-
   } else if (currentSelection.classList.value === "") {
     currentSelection.classList.add(color)
   } else {
@@ -228,4 +228,3 @@ buttonLightblue.addEventListener("click", () => cambiarColor(currentSelection, "
 buttonAquamarine.addEventListener("click", () => cambiarColor(currentSelection, "aquamarine"))
 buttonGreen.addEventListener("click", () => cambiarColor(currentSelection, "green"))
 buttonOlive.addEventListener("click", () => cambiarColor(currentSelection, "olive"))
-
