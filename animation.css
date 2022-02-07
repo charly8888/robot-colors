@@ -25,14 +25,11 @@
 }
 
 
-.head-hidden{
-  transform: scaleX(0.9);
-}
 
 .container-head-hidden{
   position: relative;
   top: 140px;
-  transform:translateY(130px) scaleX(0.85);
+  transform:translateY(130px) ;
   transition: 2s ease-in-out;
   transition-delay: 2s;
 }
@@ -50,4 +47,13 @@
   transform:scaleX(0.57) translateX(31px);
   transition: 2s ease-in-out;
 
+}
+.ear-left-hidden{
+  transform: translateX(20px);
+  transition: 2s ease-in-out;
+}
+
+.ear-right-hidden{
+  transform: translateX(-20px);
+  transition: 2s ease-in-out;
 }

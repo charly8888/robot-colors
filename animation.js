@@ -12,6 +12,8 @@ const head = document.getElementById("container-head")
 const down =document.getElementById("down")
 const footLeft =document.getElementById("foot-left")
 const footRight =document.getElementById("foot-right")
+const earLeft =document.getElementById("ear-left")
+const earRight =document.getElementById("ear-right")
 
 const estanGuardados = ()=>armRight.classList.contains("animation-right-hidden") 
 
@@ -39,6 +41,8 @@ buttonAll.addEventListener("click",()=>{
         down.classList.toggle("down-hidden")
         footRight.classList.toggle("foot-hidden-right")
         footLeft.classList.toggle("foot-hidden-legt")
+        earLeft.classList.toggle("ear-left-hidden")
+        earRight.classList.toggle("ear-right-hidden")
     }
 
 })
