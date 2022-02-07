@@ -12,8 +12,8 @@ const head = document.getElementById("container-head")
 const down =document.getElementById("down")
 const footLeft =document.getElementById("foot-left")
 const footRight =document.getElementById("foot-right")
-const earLeft =document.getElementById("ear-left")
-const earRight =document.getElementById("ear-right")
+const earLeft =document.getElementById("div-ear-left")
+const earRight =document.getElementById("div-ear-right")
 
 const estanGuardados = ()=>armRight.classList.contains("animation-right-hidden") 
 
