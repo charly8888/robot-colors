@@ -41,7 +41,7 @@ const hands = document.querySelectorAll('.hands')
 const contentButtons = document.querySelectorAll(".content-buttons")
 const hips = document.querySelectorAll(".hips")
 const legs = document.querySelectorAll(".legs")
-const foot = document.querySelectorAll(".foot")
+const foot = document.querySelectorAll(".foot-color")
 
 // Abstraemos otros elementos que rodean a los botones
 // head
