@@ -115,7 +115,6 @@ buttonHead.addEventListener("click", () => {
   } else {
   currentSelection = head
   limpiarYagregar(div_head, div_bar_head, span_head)
-  console.log(currentSelection)
 }
 })
 
@@ -173,24 +172,28 @@ buttonContentButtons.addEventListener("click", () => {
   currentSelection = contentButtons
   limpiarYagregar(div_content_buttons, div_bar_content_buttons, span_content_buttons)}
 })
+
 buttonHips.addEventListener("click", () => {
   if (currentSelection === hips) {
     limpiarYagregar(div_hips, div_bar_hips, span_hips, "nothing", "nothing", "nothing")
-
+    console.log(currentSelection)
     currentSelection = ""
   } else {
-  currentSelection =hips
-  limpiarYagregar(div_hips, div_bar_hips, span_hips)}
-})
-buttonLegs.addEventListener("click", () => {
-  if (currentSelection === legs) {
-    limpiarYagregar(div_legs, div_bar_legs, span_legs, "nothing", "nothing", "nothing")
+    currentSelection = hips
+    limpiarYagregar(div_hips, div_bar_hips, span_hips)}
+  })
 
-    currentSelection = ""
+  buttonLegs.addEventListener("click", () => {
+    if (currentSelection === legs) {
+      limpiarYagregar(div_legs, div_bar_legs, span_legs, "nothing", "nothing", "nothing")
+      
+      console.log(currentSelection) 
+      currentSelection = ""
   } else {
   currentSelection =legs
   limpiarYagregar(div_legs, div_bar_legs, span_legs)}
 })
+
 buttonFoot.addEventListener("click", () => {
   if (currentSelection === foot) {
     limpiarYagregar(div_foot, div_bar_foot, span_foot, "nothing", "nothing", "nothing")
